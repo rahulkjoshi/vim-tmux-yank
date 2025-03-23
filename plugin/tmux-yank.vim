@@ -35,7 +35,6 @@ function! TmuxYank()
 endfunction
 
 " Autoforward yank events.
-set clipboard+=unnamedplus
 augroup TmuxYankAuto
     autocmd!
     autocmd TextYankPost * if v:event.operator ==# 'y' | call TmuxYank() | endif
